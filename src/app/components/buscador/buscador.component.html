@@ -1,0 +1,15 @@
+<h1 class="animated fadeIn fast">Resultado de busqueda: <small>{{ terminoBus }}</small> </h1>
+<hr>
+
+<div *ngIf="heroes.length==0">
+    <h2>No se encontraron heroes con el término <b>{{ terminoBus }}</b></h2>
+</div>
+
+<div *ngIf="heroes.length>0" class="card-columns animated fadeIn">
+
+    <!-- con () este componente puede escuchar los eventos que esta enviando el comp. hijo -->
+    <app-heroe-tarjeta (idHeroeSeleccionado)="verHeroe( $event )" [heroe]="heroe" *ngFor="let heroe of heroes; let i=index" class="card">
+
+    </app-heroe-tarjeta>
+
+</div>

@@ -1,0 +1,17 @@
+<img class="card-img-top img-fluid" [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+<div class="card-body">
+    <h5 class="card-title">{{ heroe.nombre }} - {{ heroe.casa }}</h5>
+    <p class="card-text">{{ heroe.bio }}</p>
+    <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+
+
+    <button (click)="verHeroe(heroe.id)" class="btn btn-outline-primary btn-block">
+                Ver mas...
+            </button>
+
+    <!-- Redireccionamiento con RouterLink -->
+    <!-- <a [routerLink]="['/heroe', i+1]" class="btn btn-outline-primary btn-block">
+                Ver mas link...
+    </a> -->
+
+</div>
